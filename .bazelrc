@@ -1,0 +1,9 @@
+build:clang --cxxopt=-fbracket-depth=512
+build:clang --client_env=CC=g++
+build:clang --client_env=CXX=g++
+build:clang --action_env=CC=g++
+build:clang --action_env=CXX=g++
+build:clang --cxxopt=-std=c++17
+build:clang --host_cxxopt=-std=c++17
+build:clang --client_env=BAZEL_CXXOPTS=-std=c++17
+build:clang --action_env=BAZEL_CXXOPTS=-std=c++17
