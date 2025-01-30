@@ -8,7 +8,6 @@
 #include <string>
 #include <tuple>
 
-#include <omp.h>
 #include "filter_utils.h"
 #include "index.h"
 #include "parameters.h"
