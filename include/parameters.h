@@ -6,7 +6,6 @@
 #include <typeinfo>
 #include <unordered_map>
 
-#include "omp.h"
 #include "defaults.h"
 
 namespace diskann
@@ -81,7 +80,7 @@ class IndexWriteParametersBuilder
 
     IndexWriteParametersBuilder &with_num_threads(const uint32_t num_threads)
     {
-        _num_threads = num_threads == 0 ? omp_get_num_procs() : num_threads;
+        _num_threads = num_threads == 0 ? 1 : num_threads;
         return *this;
     }
 
